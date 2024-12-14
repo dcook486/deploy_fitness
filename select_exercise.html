@@ -1,0 +1,14 @@
+{% extends "tracker/base.html" %}
+
+{% block content %}
+<h2>Select an Exercise</h2>
+<form method="post">
+    {% csrf_token %}
+    <div>
+    {{ form.exercise.label_tag }}
+    {{ form.exercise }}
+    </div>
+
+    <button type="submit" style="background-color: greenyellow; color: black;">Add Exercise</button>
+</form>
+{% endblock %}
